@@ -2,18 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('feedbackForm');
     if (!form) return;
     
+    // Отключаем стандартную валидацию Bootstrap
     form.classList.remove('was-validated');
     form.setAttribute('novalidate', 'novalidate');
     
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Сбрасываем предыдущие ошибки
+        // Сбрасываем предыдущие ошибки и стили
         document.querySelectorAll('.form-control.is-invalid, .form-select.is-invalid, .form-check-input.is-invalid').forEach(el => {
             el.classList.remove('is-invalid');
         });
         document.querySelectorAll('.form-control.is-valid, .form-select.is-valid, .form-check-input.is-valid').forEach(el => {
             el.classList.remove('is-valid');
+        });
         document.querySelectorAll('.invalid-feedback, .valid-feedback').forEach(el => el.remove());
         
         let isValid = true;
@@ -89,31 +91,31 @@ document.addEventListener('DOMContentLoaded', function() {
             document.dispatchEvent(event);
             
             alert('Форма отправлена! Данные в консоли.');
-        } 
+        }
     });
     
     // Функция показа ошибки
     function showError(input, message) {
         input.classList.add('is-invalid');
         
-        let help = input.nextElementSibling;
-        if (!help || !help.classList.contains('invalid-feedback')) {
-            help = document.createElement('div');
-            help.classList.add('invalid-feedback');
-            
-            if (input.type === 'checkbox') {
-                const parentDiv = input.closest('.form-check');
-                parentDiv.appendChild(help);
-                const oldErrors = parentDiv.querySelectorAll('.invalid-feedback');
-                oldErrors.forEach(el => el.remove());
-            } else {
-                const oldErrors = input.parentNode.querySelectorAll('.invalid-feedback');
-                oldErrors.forEach(el => el.remove());
-                input.parentNode.appendChild(help);
-            }
-        }
-        
+        // Создаем сообщение об ошибке
+        const help = document.createElement('div');
+        help.classList.add('invalid-feedback');
         help.textContent = message;
+        
+        // Для checkbox добавляем после родительского div
+        if (input.type === 'checkbox') {
+            const parentDiv = input.closest('.form-check');
+            // Удаляем старые сообщения об ошибках
+            const oldErrors = parentDiv.querySelectorAll('.invalid-feedback');
+            oldErrors.forEach(el => el.remove());
+            parentDiv.appendChild(help);
+        } else {
+            // Удаляем старые сообщения об ошибках
+            const oldErrors = input.parentNode.querySelectorAll('.invalid-feedback');
+            oldErrors.forEach(el => el.remove());
+            input.parentNode.appendChild(help);
+        }
     }
     
     // Сброс ошибки при вводе
@@ -130,10 +132,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const errors = this.parentNode.querySelectorAll('.invalid-feedback');
                 errors.forEach(el => el.remove());
             }
-            
-            form.classList.remove('was-validated');
         });
         
+        // Для select также обрабатываем change
         if (input.tagName === 'SELECT') {
             input.addEventListener('change', function() {
                 this.classList.remove('is-invalid');
