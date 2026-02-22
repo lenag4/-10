@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('feedbackForm');
     if (!form) return;
     
+    form.classList.remove('was-validated');
+    form.setAttribute('novalidate', 'novalidate');
+    
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
@@ -9,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.form-control.is-invalid, .form-select.is-invalid, .form-check-input.is-invalid').forEach(el => {
             el.classList.remove('is-invalid');
         });
-        document.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
+        document.querySelectorAll('.form-control.is-valid, .form-select.is-valid, .form-check-input.is-valid').forEach(el => {
+            el.classList.remove('is-valid');
+        document.querySelectorAll('.invalid-feedback, .valid-feedback').forEach(el => el.remove());
         
         let isValid = true;
         
@@ -84,9 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.dispatchEvent(event);
             
             alert('Форма отправлена! Данные в консоли.');
-        } else {
-            form.classList.add('was-validated');
-        }
+        } 
     });
     
     // Функция показа ошибки
@@ -101,13 +104,16 @@ document.addEventListener('DOMContentLoaded', function() {
             if (input.type === 'checkbox') {
                 const parentDiv = input.closest('.form-check');
                 parentDiv.appendChild(help);
+                const oldErrors = parentDiv.querySelectorAll('.invalid-feedback');
+                oldErrors.forEach(el => el.remove());
             } else {
+                const oldErrors = input.parentNode.querySelectorAll('.invalid-feedback');
+                oldErrors.forEach(el => el.remove());
                 input.parentNode.appendChild(help);
             }
         }
         
         help.textContent = message;
-        help.style.display = 'block';
     }
     
     // Сброс ошибки при вводе
@@ -133,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.remove('is-invalid');
                 const errors = this.parentNode.querySelectorAll('.invalid-feedback');
                 errors.forEach(el => el.remove());
-                form.classList.remove('was-validated');
             });
         }
     });
