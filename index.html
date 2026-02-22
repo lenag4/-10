@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Минималистичный лендинг | bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md fixed-top nav1">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="header_logo" src="image/logo.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="404.html">Форматы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="404.html">Мастер-классы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="404.html">Записаться</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+    <div id="home" class="container-fluid col-xxl-8 px-4 py-5 d-flex align-items-end">
+      <div class="col-lg-6">
+          <p class="lead">Вдохновляйся, создавай, радуйся</p>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Гончарная мастерская Гамма</h1>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Записаться</button>
+      </div>
+    </div>
+
+    <div class="px-4 py-5 my-5 text-center col-lg-6 mx-auto">
+        <p class="lead mb-4 display-6">Мы создали для вас творческое пространство,
+            в котором вы создадите произведения искусства своими руками</p>
+    </div>
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2">Форматы</h2>
+    
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg border-0" style="background-image: url('image/5.png'); background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #f8f9fa;">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 lh-1 fw-bold">За гончарным кругом</h3>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg border-0" style="background-image: url('image/6.png'); background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #f8f9fa;">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 lh-1 fw-bold">Ручная лепка</h3>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg border-0" style="background-image: url('image/7.png'); background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #f8f9fa;">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 lh-1 fw-bold">Роспись</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Записаться</button>
+        </div>
+    </div>
+
+    <div class="container-fluid col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-5 py-5"> 
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="image/2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="600" height="400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center">Гамма это...</h1>
+                <p class="lead text-center">Атмосфера вдохновения и профессионализма. Мы создали уютное пространство, где каждый сможет раскрыть свой потенциал, даже если лепит впервые.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="container px-4 py-5 ms-4 me-4">Мастер-классы</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 ms-4 me-4">
+        <div class="col">
+          <div class="card">
+            <img src="image/3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Кофейная пара</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="image/3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Кофейная пара</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="image/3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Кофейная пара</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="image/3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Кофейная пара</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card">
+              <img src="image/3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Кофейная пара</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+              <img src="image/3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Кофейная пара</h5>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 my-5">Показать ещё</button>
+    </div>
+
+    <h2 class="container px-4 py-5 ms-4 me-4">Часто задаваемые вопросы</h2>
+    <div class="container col-xxl-8 px-4 pb-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 pb-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="image/4.png" class="d-block mx-lg-auto img-fluid" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Нужно ли иметь опыт, чтобы записаться на мастер-класс?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Совершенно не обязательно! Наши мастер-классы подходят как для новичков, так и для опытных мастеров. Мы расскажем все с нуля и поможем создать ваше первое изделие.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Нужно ли иметь опыт, чтобы записаться на мастер-класс?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Совершенно не обязательно! Наши мастер-классы подходят как для новичков, так и для опытных мастеров. Мы расскажем все с нуля и поможем создать ваше первое изделие</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Нужно ли иметь опыт, чтобы записаться на мастер-класс?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Совершенно не обязательно! Наши мастер-классы подходят как для новичков, так и для опытных мастеров. Мы расскажем все с нуля и поможем создать ваше первое изделие</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container footer">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <img class="header_logo" src="image/logo.png" alt="logo">
+        </a>
+        <p class="text-body-secondary">&copy; 2026</p>
+        <a href="404.html" class="nav-link p-0 text-body-secondary">Telegram</a>
+        <a href="404.html" class="nav-link p-0 text-body-secondary">VK</a>
+        </div>
+
+        <div class="col mb-3">
+        </div>
+
+        <div class="col mb-3">
+        <h5>Форматы</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="404.html" class="nav-link p-0 text-body-secondary">За гончарном кругом</a></li>
+          <li class="nav-item mb-2"><a href="404.html" class="nav-link p-0 text-body-secondary">Ручная лепка</a></li>
+          <li class="nav-item mb-2"><a href="404.html" class="nav-link p-0 text-body-secondary">Роспись</a></li>
+        </ul>
+        </div>
+
+        <div class="col mb-3">
+        <h5>Мастер-классы</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="404.html" class="nav-link p-0 text-body-secondary">Посуда</a></li>
+          <li class="nav-item mb-2"><a href="404.html" class="nav-link p-0 text-body-secondary">Декор для интерьера</a></li>
+          <li class="nav-item mb-2"><a href="404.html" class="nav-link p-0 text-body-secondary">Свободная форма</a></li>
+          <li class="nav-item mb-2"><a href="404.html" class="nav-link p-0 text-body-secondary">Роспись</a></li>
+        </ul>
+        </div>
+
+        <div class="col mb-3">
+        <h5>Контакты</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary">+ 7 (916) 000-00-00</a></li>
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary">Каждый день с 12 до 22</a></li>
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary">Москва, ул Название, 11</a></li>
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary">info@example.com</a></li>
+        </ul>
+        </div>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
